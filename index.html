@@ -24,11 +24,39 @@
 
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
+        <h1>Pokedex</h1> 
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
+        <button onclick="openModal()" id="openModal" type="button">Buscar Pokemon</button>
+
+<div class="windowModal" id="windowModal">
+    <div class="modal">
+        <button class="fechar" id="fechar">X</button>
+
+        <h2>Digite o número do Pokemon para ver os detalhes:</h2>
+        <form>
+            <input id="PokemonNumberInput" type="number" name="form">
+            <button id="buscar" type="button">Buscar</button>
+        </form>
+
+        <div>
+            <img id="pokemonImage" src="" >
+            <div id="pokemonDetails" style="display: none;">
+            <img id="imgPokebola" src="/img/pokebolaImage.png" alt="Minha Figura">
+            <h4> Detalhes do Pokemon</h4><br>
+            <p>  Nome: <span id="pokemonName"></span></p><br>
+            <p>  Número: <span id="pokemonNumber"></span></p><br>
+            <p>  Tipo: <span id="pokemonTypes"></span></p><br>
+            
+          </div>
+        </div> 
+    </div>
+</div> 
+
+             <ol class="pokemons" id="pokemonList" >
+                <!-- ..... Pokemons here ..... -->
+              </ol>
+             
+        
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
